@@ -1,0 +1,18 @@
+index.js がcwdにあれば、以下のコマンドでそれを実行できる
+
+>> node .
+
+しかし、これはスマートではないので、
+package.json内に例えば以下のような定義を登録しておいて、shで以下のように実行する。
+
+``` package.json
+"scripts" : {
+    "start" : "node ."
+}
+```
+
+``` sh
+yarn start
+```
+
+
