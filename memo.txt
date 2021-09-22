@@ -1,0 +1,58 @@
+# Privacy Sandbox の Development Document のURL
+https://developer.chrome.com/ja/docs/privacy-sandbox/overview/
+
+# この Conversion Measurement API:demo の git-URL
+https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement
+
+
+
+----
+
+yarn はnode.jsのパッケージマネージャで他にもnpmもある。
+
+node.jsはjavaScript環境で動作するサーバーサイドのプログラミング言語。
+クライアント側のブラウザ上では、多くのjavaScriptが使われているが、それと同じ感覚でサーバー側も開発できるのが嬉しい。
+
+パッケージマネージャーは依存するソフトウェアのバージョン管理などをするもの。
+
+---
+
+## yarn --cwd "publisher"
+
+cwd は Current Working Directory の略称。
+これによって、　publisher をPATHの起点とする、cwdライブラリを読み込む。
+上記の指定によって、"publisher"ディレクトリを開始地点とするPATHからプロジェクトファイル package.json を探すようになる。
+
+### package.jsonの中身
+
+```
+    {
+    "name": "demo-event-level-conversion-measurement-api",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "start:dev": "NODE_ENV=development node server.js"
+    },
+    "repository": {
+        "type": "git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {},
+    "homepage": "https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement#readme",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "pug": "^3.0.0"
+    }
+    }
+```
+
+
+### Usage
+```
+var cwd 
+```
+

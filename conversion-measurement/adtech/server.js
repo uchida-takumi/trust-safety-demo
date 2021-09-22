@@ -28,8 +28,11 @@ app.get('/ad', (req, res) => {
 })
 
 app.get('/ad-script', (req, res) => {
+  // 返却(res)の　Content-Type を javascriptに設定
   res.set('Content-Type', 'text/javascript')
+  //表示するディスプレイ広告のデータがあるエンドポイントURLを設定
   const adUrl = `${process.env.ADTECH_URL}/ad`
+  // iframeタグの生成スクリプトを返却する
   res.send(
     `console.info('✔️ Adtech script loaded'); document.write("<iframe src='${adUrl}' allow='attribution-reporting' width=190 height=200 scrolling=no frameborder=1 padding=0></iframe>")`
   )
